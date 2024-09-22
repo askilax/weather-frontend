@@ -1,4 +1,6 @@
-// Fonction pour le bouton Register
+let url = 'https://weather-backend-zeta.vercel.app/'
+
+
 document.querySelector('#register').addEventListener('click', () => {
     const name = document.querySelector('#registerName').value;
     const email = document.querySelector('#registerEmail').value;
@@ -11,7 +13,7 @@ document.querySelector('#register').addEventListener('click', () => {
     }
 
 
-    fetch('http://localhost:3000/users/signup', {
+    fetch(`${url}users/signup`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -44,7 +46,7 @@ document.querySelector('#connection').addEventListener('click', () => {
     }
 
 
-    fetch('http://localhost:3000/users/signin', { 
+    fetch(`${url}users/signin`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
